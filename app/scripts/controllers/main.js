@@ -221,7 +221,7 @@ angular.module('firePokerApp')
       $location.path('/games/' + $routeParams.gid);
       $location.replace();
     };
- 
+
     $scope.fib = function (num){
       var a = 1, b = 0, temp;
 
@@ -315,12 +315,10 @@ angular.module('firePokerApp')
 
     // Set Defaults
     $scope.newGame = { deck: 0 };
-    $scope.deckType = 
     $scope.showCardDeck = true;
     $scope.showSelectEstimate = false;
     $scope.disablePlayAgainAndRevealButtons = false;
     $scope.showCards = false;
-    
 
     // Set card deck visibility
     $scope.setShowCardDeck = function() {
