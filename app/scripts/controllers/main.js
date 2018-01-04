@@ -221,6 +221,19 @@ angular.module('firePokerApp')
       $location.path('/games/' + $routeParams.gid);
       $location.replace();
     };
+ 
+    $scope.fib = function (num){
+      var a = 1, b = 0, temp;
+
+      while (num >= 0){
+        temp = a;
+        a = a + b;
+        b = temp;
+        num--;
+      }
+
+      return b;
+    };
 
     // Get estimate results average
     $scope.getResultsAverage = function() {
@@ -230,6 +243,8 @@ angular.module('firePokerApp')
         angular.forEach($scope.game.estimate.results, function(result) {
           if (result.points && angular.isNumber(result.points)) {
             sum += result.points;
+          } else if (result.points && !angular.isNumber(result.points) && result.points !== '?') {
+            sum += $scope.fib($scope.decks[$scope.newGame.deck].indexOf(result.points) + 1);
           }
         });
         avg = Math.ceil(sum / $scope.game.estimate.results.length);
@@ -299,11 +314,13 @@ angular.module('firePokerApp')
     ];
 
     // Set Defaults
-    $scope.newGame = {deck: 0};
+    $scope.newGame = { deck: 0 };
+    $scope.deckType = 
     $scope.showCardDeck = true;
     $scope.showSelectEstimate = false;
     $scope.disablePlayAgainAndRevealButtons = false;
     $scope.showCards = false;
+    
 
     // Set card deck visibility
     $scope.setShowCardDeck = function() {
