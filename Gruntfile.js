@@ -262,7 +262,7 @@ module.exports = function (grunt) {
     'gh-pages': {
       options: {
         base: 'dist',
-        repo: 'git@github.com:Wizehive/Firepoker.git'
+        repo: 'git@github.com:jimklo/Firepoker.git'
       },
       src: ['**']
     }
