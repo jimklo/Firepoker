@@ -25,7 +25,7 @@
       <div class="form-group">
         <label for="deck">Choose the set of estimate cards you want to use.</label>
         <select class="form-control" id="deck" ng-model="newGame.deck" required>
-          <option ng-repeat="deck in decks" ng-value="$index">{{ deck.join(", ")}}</option>
+          <option ng-repeat="deck in decks" ng-value="$index" ng-selected="$index == newGame.deck">{{ deck.join(", ") }}</option>
         </select>
       </div>
       <button type="submit" class="btn btn-success" ng-disabled="form.$invalid">Create game</button>
