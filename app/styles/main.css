@@ -41,7 +41,7 @@ body {
 }
 
 .card {
-  width: 80px;
+  min-width: 80px;
   height: 110px;
   color: #333;
   background-color: #fff;
@@ -53,6 +53,8 @@ body {
   border: 1px solid;
   border-radius: 4px;
   padding-top:30px;
+  padding-left: .5em;
+  padding-right: .5em;
   margin:10px;
 }
 
@@ -61,11 +63,11 @@ body {
 }
 
 .list-item {
-  width: 105px;
+  min-width: 105px;
 }
 
 .list-item .truncate {
-  width: 100px;
+  min-width: 100px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
