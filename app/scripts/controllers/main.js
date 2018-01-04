@@ -14,7 +14,8 @@ angular.module('firePokerApp')
 
     // Firebase URL
     //var URL = 'https://pzfqrq7kjy.firebaseio.com';
-    var URL = 'https://firepokerio.firebaseio.com';
+    // var URL = 'https://firepokerio.firebaseio.com';
+    var URL = 'https://firepoker-6e072.firebaseio.com/';
 
     // Initialize Firebase
     /*global Firebase*/
@@ -293,7 +294,7 @@ angular.module('firePokerApp')
 
     // Card deck options
     $scope.decks = [
-      [0, 1, 2, 4, 8, 16, 32, 64, 128, '?'],
+      ['xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large', 'xxx-large', '?'],
       [0, 0.5, 1, 2, 3, 5, 8, 13, 20, 40, 100, '?']
     ];
 
