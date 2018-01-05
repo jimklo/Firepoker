@@ -72,8 +72,8 @@
     <div ng-show="isOwner">
       <ul class="nav nav-tabs">
         <li><a href="#free-form" data-toggle="tab" >Free-form</a></li>
-        <li class="active"><a href="#structured" data-toggle="tab">Structured</a></li>
-        <li><a href="#story-list" data-toggle="tab">Story list</a>
+        <li><a href="#structured" data-toggle="tab">Structured</a></li>
+        <li class="active"><a href="#story-list" data-toggle="tab">Story list</a>
       </ul>
       <div class="tab-content">
         <div class="tab-pane" id="free-form">
@@ -91,7 +91,7 @@
              or <a href="#">Cancel</a>
           </form>
         </div>
-        <div class="tab-pane active" id="structured">
+        <div class="tab-pane" id="structured">
           <form name="formStructured" ng-submit="createStory('structured')" novalidate>
             <div class="form-group">
               <label for="structured-story-as-a-an">As a/an...</label>
@@ -113,7 +113,7 @@
              or <a href="#">Cancel</a>
           </form>
         </div>
-        <div class="tab-pane" id="story-list">
+        <div class="tab-pane active" id="story-list">
           <div ng-show="game.stories">
             <ul ng-show="unestimatedStoriesCount" class="list-unstyled">
               <li ng-repeat="story in game.stories" ng-show="story.status == 'queue'">
@@ -131,9 +131,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="vspace">
-      <p>Project built with <a href="http://www.firebase.com" target="_blank">Firebase</a> and <a href="http://www.angularjs.org/" target="_blank">AngularJS</a> at <a href="http://www.wizehive.com/" target="_blank">WizeHive</a>.</p>
     </div>
   </div>
   <div class="col-md-4">
